@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipient first name:</strong>
+  <%= @letter.recipient_first_name %>
+</p>
+
+<p>
+  <strong>Recipeint last name:</strong>
+  <%= @letter.recipeint_last_name %>
+</p>
+
+<p>
+  <strong>Recipient street:</strong>
+  <%= @letter.recipient_street %>
+</p>
+
+<p>
+  <strong>Recipient city:</strong>
+  <%= @letter.recipient_city %>
+</p>
+
+<p>
+  <strong>Recipient state:</strong>
+  <%= @letter.recipient_state %>
+</p>
+
+<p>
+  <strong>Recipient zip:</strong>
+  <%= @letter.recipient_zip %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @letter.content %>
+</p>
+
+<%= link_to 'Edit', edit_letter_path(@letter) %> |
+<%= link_to 'Back', letters_path %>
