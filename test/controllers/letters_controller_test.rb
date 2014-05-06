@@ -18,7 +18,7 @@ class LettersControllerTest < ActionController::TestCase
 
   test "should create letter" do
     assert_difference('Letter.count') do
-      post :create, letter: { content: @letter.content, recipeint_last_name: @letter.recipeint_last_name, recipient_city: @letter.recipient_city, recipient_first_name: @letter.recipient_first_name, recipient_state: @letter.recipient_state, recipient_street: @letter.recipient_street, recipient_zip: @letter.recipient_zip }
+      post :create, letter: { content: @letter.content, recipient_last_name: @letter.recipient_last_name, recipient_city: @letter.recipient_city, recipient_first_name: @letter.recipient_first_name, recipient_state: @letter.recipient_state, recipient_street: @letter.recipient_street, recipient_zip: @letter.recipient_zip }
     end
 
     assert_redirected_to letter_path(assigns(:letter))
@@ -35,7 +35,7 @@ class LettersControllerTest < ActionController::TestCase
   end
 
   test "should update letter" do
-    patch :update, id: @letter, letter: { content: @letter.content, recipeint_last_name: @letter.recipeint_last_name, recipient_city: @letter.recipient_city, recipient_first_name: @letter.recipient_first_name, recipient_state: @letter.recipient_state, recipient_street: @letter.recipient_street, recipient_zip: @letter.recipient_zip }
+    patch :update, id: @letter, letter: { content: @letter.content, recipient_last_name: @letter.recipient_last_name, recipient_city: @letter.recipient_city, recipient_first_name: @letter.recipient_first_name, recipient_state: @letter.recipient_state, recipient_street: @letter.recipient_street, recipient_zip: @letter.recipient_zip }
     assert_redirected_to letter_path(assigns(:letter))
   end
 

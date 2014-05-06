@@ -61,6 +61,20 @@ class LettersController < ApplicationController
     end
   end
 
+  #Lob
+
+  def send_letter
+    @lob = Lob(api_key: "test_aef982f552057fc81ccc43a2b14e106ebe3")
+    @lob.addresses.create(
+      name: params[:recipient_first_name][:recipient_last_name]
+      address_line1: params[:recipient_street],
+      city: params[:recipient_city],
+      state: params[:recipient_state],
+      country: "US",
+      zip: params[:recipient_zip]
+)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_letter
@@ -69,6 +83,6 @@ class LettersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def letter_params
-      params.require(:letter).permit(:recipient_first_name, :recipeint_last_name, :recipient_street, :recipient_city, :recipient_state, :recipient_zip, :content)
+      params.require(:letter).permit(:recipient_first_name, :recipient_last_name, :recipient_street, :recipient_city, :recipient_state, :recipient_zip, :content)
     end
 end

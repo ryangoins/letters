@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140423013446) do
+ActiveRecord::Schema.define(version: 20140423015936) do
 
-  create_table "letters", force: true do |t|
+  create_table "Letters", force: true do |t|
     t.string   "recipient_first_name"
-    t.string   "recipeint_last_name"
+    t.string   "recipient_last_name"
     t.string   "recipient_street"
     t.string   "recipient_city"
     t.string   "recipient_state"

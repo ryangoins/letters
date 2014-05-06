@@ -2,7 +2,7 @@
 
 one:
   recipient_first_name: MyString
-  recipeint_last_name: MyString
+  recipient_last_name: MyString
   recipient_street: MyString
   recipient_city: MyString
   recipient_state: MyString
@@ -11,7 +11,7 @@ one:
 
 two:
   recipient_first_name: MyString
-  recipeint_last_name: MyString
+  recipient_last_name: MyString
   recipient_street: MyString
   recipient_city: MyString
   recipient_state: MyString
