@@ -65,14 +65,27 @@ class LettersController < ApplicationController
 
   def send_letter
     @lob = Lob(api_key: "test_aef982f552057fc81ccc43a2b14e106ebe3")
-    @lob.addresses.create(
-      name: params[:recipient_first_name][:recipient_last_name]
-      address_line1: params[:recipient_street],
-      city: params[:recipient_city],
-      state: params[:recipient_state],
-      country: "US",
-      zip: params[:recipient_zip]
-)
+    @lob.jobs.create(
+      name: "Inline Test Job",
+        from: {
+        name: "Ryan Goins",
+        address_line1: "924 S Westnedge Ave",
+        city: "Kalamazoo",
+        state: "MI",
+        country: "US",
+        zip: 48329
+      },
+      to: {
+        name: params[:recipient_first_name][:recipient_last_name]
+        address_line1: params[:recipient_street],
+        city: params[:recipient_city],
+        state: params[:recipient_state],
+        country: "US",
+        zip: params[:recipient_zip]
+      }
+       front: "https://www.lob.com/postcardback.pdf",
+       message: "Hey Ryan, you did it! Your first letter!"
+    )
   end
 
   private
